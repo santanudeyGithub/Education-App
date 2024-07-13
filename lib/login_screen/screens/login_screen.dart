@@ -126,11 +126,31 @@ class _LoginScreenState extends State<LoginScreen> {
                             builder: (context) =>
                                 const ForgotPasswordScreen()));
                   },
-                  child: const Text(
-                    "Forgot Password?",
-                    style: TextStyle(
-                      color: Color(0xFF6A707C),
-                    ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const RegisterScreen()),
+                          );
+                        },
+                        child: Text(
+                          "Register",
+                          style: TextStyle(
+                            color: Color(0xFF6A707C),
+                          ),
+                        ),
+                      ),
+                      Text(
+                        'Forgot Password?',
+                        style: TextStyle(
+                          color: Color(0xFF6A707C),
+                        ),
+                      ),
+                    ],
                   ),
                 ),
               ),
@@ -282,9 +302,9 @@ class _LoginScreenState extends State<LoginScreen> {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => TermsConditionsPage()));
+                            builder: (context) => const TermsConditionsPage()));
                   },
-                  child: Text(
+                  child: const Text(
                     "Terms & condition ",
                     style: TextStyle(
                       fontSize: 16,
@@ -292,14 +312,14 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                   ),
                 ),
-                SizedBox(width: 10),
+                const SizedBox(width: 10),
                 const Text('-'),
                 GestureDetector(
                   onTap: () {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => PrivacyPolicyPage()));
+                            builder: (context) => const PrivacyPolicyPage()));
                   },
                   child: const Padding(
                     padding: EdgeInsets.only(left: 18),
@@ -329,9 +349,9 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.only(left: 155),
-              child: const Text('All rights reserved.'),
+            const Padding(
+              padding: EdgeInsets.only(left: 155),
+              child: Text('All rights reserved.'),
             ),
           ],
         ),

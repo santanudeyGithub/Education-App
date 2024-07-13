@@ -26,8 +26,9 @@ class _SplashScreenState extends State<SplashScreen>
     });
     animationController.forward();
 
-    Future.delayed(const Duration(seconds: 2))
-        .then((value) => Navigator.popAndPushNamed(context, AppRoutes.onboard));
+    Future.delayed(
+      const Duration(seconds: 10),
+    ).then((value) => Navigator.popAndPushNamed(context, AppRoutes.onboard));
 
     super.initState();
   }
@@ -49,8 +50,8 @@ class _SplashScreenState extends State<SplashScreen>
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Image.asset(
-              'assets/images/time-to-travel.png',
-              height: animation.value * 200,
+              'assets/images/logo.png',
+              height: animation.value * 300,
             ),
           ],
         ),

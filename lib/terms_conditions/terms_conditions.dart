@@ -145,14 +145,14 @@ class _TermsConditionsPageState extends State<TermsConditionsPage> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
-                      Text(
-                        'Terms & Conditions',
-                        style: TextStyle(
-                          fontSize: 28,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.teal,
-                        ),
-                      ),
+                      // Text(
+                      //   'Terms & Conditions',
+                      //   style: TextStyle(
+                      //     fontSize: 28,
+                      //     fontWeight: FontWeight.bold,
+                      //     color: Colors.teal,
+                      //   ),
+                      // ),
                       SizedBox(height: 20),
                       _buildSectionTitle('Introduction'),
                       _buildSectionContent(

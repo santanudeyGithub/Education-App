@@ -15,7 +15,7 @@ class KDummyData {
           "Lorem ipsum dolor sit amet consectetur adipisicing elit",
     ),
     OnBoardItems(
-      image: 'assets/images/school-children-png-4.png',
+      image: 'assets/images/children.png',
       title: "Learn Backup Lesson",
       shortDescription:
           "Lorem ipsum dolor sit amet consectetur adipisicing elit",

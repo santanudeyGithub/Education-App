@@ -56,7 +56,7 @@ class OTPScreen extends StatelessWidget {
               child: SizedBox(
                 width: MediaQuery.of(context).size.width * 0.8,
                 child: const Text(
-                  "Phone Verification",
+                  "Email Verification",
                   style: TextStyle(
                     fontSize: 30,
                     fontWeight: FontWeight.w700,
@@ -70,7 +70,7 @@ class OTPScreen extends StatelessWidget {
                 vertical: 10,
               ),
               child: Text(
-                "Enter the verification code we just sent on your phone number.",
+                "Enter the verification code we just sent on your email.",
                 style: TextStyle(
                   color: Color(0xFF8391A1),
                   fontSize: 16,

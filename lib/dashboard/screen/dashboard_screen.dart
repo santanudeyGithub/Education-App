@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:onboarding_flutter_app/about_us/about_us.dart';
+import 'package:onboarding_flutter_app/auth2fm.dart';
 import 'package:onboarding_flutter_app/custom_appBar/custom_appbar_screen.dart';
 import 'package:onboarding_flutter_app/feedback/feedback.dart';
 import 'package:onboarding_flutter_app/floating_bot_page/flaot_all_page_details/bot_message_body.dart';
@@ -595,7 +596,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (context) => const MyFriendsPage(),
+                                  builder: (context) => AuthenticationTwoFM(),
                                 ),
                               );
                             },
@@ -612,7 +613,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (context) => const MyFriendsPage(),
+                                  builder: (context) => AuthenticationTwoFM(),
                                 ),
                               );
                             },
@@ -631,7 +632,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (context) => const MyFriendsPage(),
+                                  builder: (context) => AuthenticationTwoFM(),
                                 ),
                               );
                             },

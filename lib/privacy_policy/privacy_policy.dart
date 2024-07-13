@@ -89,7 +89,7 @@ class _PrivacyPolicyPageState extends State<PrivacyPolicyPage> {
                     Padding(
                       padding: const EdgeInsets.only(right: 65),
                       child: Text(
-                        'My Friends List',
+                        'Privacy Policy',
                         style: GoogleFonts.roboto(
                           color: Colors.white,
                           fontSize: 24.0,
@@ -150,26 +150,26 @@ class _PrivacyPolicyPageState extends State<PrivacyPolicyPage> {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Row(
-                              children: [
-                                Icon(
-                                  Icons.privacy_tip,
-                                  size: 50.0,
-                                  color: Colors.teal[300],
-                                ),
-                                Padding(
-                                  padding: const EdgeInsets.only(left: 15),
-                                  child: Text(
-                                    'Privacy Policy',
-                                    style: GoogleFonts.lato(
-                                      fontSize: 24.0,
-                                      fontWeight: FontWeight.bold,
-                                      color: Colors.teal[800],
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            ),
+                            // Row(
+                            //   children: [
+                            //     Icon(
+                            //       Icons.privacy_tip,
+                            //       size: 50.0,
+                            //       color: Colors.teal[300],
+                            //     ),
+                            //     Padding(
+                            //       padding: const EdgeInsets.only(left: 15),
+                            //       child: Text(
+                            //         'Privacy Policy',
+                            //         style: GoogleFonts.lato(
+                            //           fontSize: 24.0,
+                            //           fontWeight: FontWeight.bold,
+                            //           color: Colors.teal[800],
+                            //         ),
+                            //       ),
+                            //     ),
+                            //   ],
+                            // ),
                             SizedBox(height: 16.0),
                             Text(
                               'Last updated: July 4, 2024',

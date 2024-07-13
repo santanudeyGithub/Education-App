@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:onboarding_flutter_app/dashboard/screen/dashboard_screen.dart';
 import '../../core/app_routes.dart';
 import '../../data/dummy_data.dart';
 import '../../utils/constants.dart';
@@ -60,10 +61,10 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 },
               ),
             ),
-            Row(
-              children: [
-                SizedBox(width: size.width * 0.05),
-                Row(
+            Padding(
+              padding: const EdgeInsets.only(left: 160),
+              child: Container(
+                child: Row(
                   children: [
                     ...List.generate(
                       KDummyData.onBoardItemList.length,
@@ -82,37 +83,84 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     ),
                   ],
                 ),
+              ),
+            ),
+            Row(
+              children: [
+                SizedBox(width: size.width * 0.05),
+                // Row(
+                //   children: [
+                //     ...List.generate(
+                //       KDummyData.onBoardItemList.length,
+                //       (index) => AnimatedContainer(
+                //         duration: const Duration(milliseconds: 500),
+                //         curve: Curves.ease,
+                //         height: 8,
+                //         width: selectedIndex == index ? 24 : 8,
+                //         margin: const EdgeInsets.only(right: 8),
+                //         decoration: BoxDecoration(
+                //             color: selectedIndex == index
+                //                 ? appColor.primaryColor
+                //                 : appColor.gray_100,
+                //             borderRadius: BorderRadius.circular(8)),
+                //       ),
+                //     ),
+                //   ],
+                // ),
                 const Spacer(),
-                GestureDetector(
-                  onTap: () {
-                    if (selectedIndex < KDummyData.onBoardItemList.length - 1) {
-                      controller.animateToPage(selectedIndex + 1,
-                          duration: const Duration(milliseconds: 500),
-                          curve: Curves.ease);
-                    } else {
-                      Navigator.popAndPushNamed(context, AppRoutes.home);
-                    }
-                  },
-                  child: CircleAvatar(
-                    radius: 35,
-                    backgroundColor: appColor.blueColorOne,
-                    child:
-                        selectedIndex != KDummyData.onBoardItemList.length - 1
-                            ? const Icon(
-                                Icons.arrow_forward,
-                                size: 30,
-                                color: Colors.white,
-                              )
-                            : Text(
-                                "Go".toUpperCase(),
-                                style: Theme.of(context)
-                                    .textTheme
-                                    .titleLarge!
-                                    .copyWith(
-                                      fontWeight: FontWeight.bold,
-                                      color: Colors.white,
-                                    ),
-                              ),
+                Padding(
+                  padding: const EdgeInsets.only(top: 55, right: 142),
+                  child: GestureDetector(
+                    onTap: () {
+                      if (selectedIndex <
+                          KDummyData.onBoardItemList.length - 1) {
+                        controller.animateToPage(selectedIndex + 1,
+                            duration: const Duration(milliseconds: 500),
+                            curve: Curves.ease);
+                      } else {
+                        Navigator.popAndPushNamed(context, AppRoutes.home);
+                      }
+                    },
+                    child: CircleAvatar(
+                      radius: 35,
+                      backgroundColor: appColor.blueColorOne,
+                      child:
+                          selectedIndex != KDummyData.onBoardItemList.length - 1
+                              ? const Icon(
+                                  Icons.arrow_forward,
+                                  size: 30,
+                                  color: Colors.white,
+                                )
+                              : Text(
+                                  "Go".toUpperCase(),
+                                  style: Theme.of(context)
+                                      .textTheme
+                                      .titleLarge!
+                                      .copyWith(
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.white,
+                                      ),
+                                ),
+                    ),
+
+                    // child: ElevatedButton(
+                    //   onPressed: () {
+                    //     // selectedIndex != KDummyData.onBoardItemList.length - 1;
+                    //     Navigator.push(
+                    //       context,
+                    //       MaterialPageRoute(
+                    //           builder: (context) => const DashboardScreen()),
+                    //     );
+                    //   },
+                    //   style: ElevatedButton.styleFrom(
+                    //     backgroundColor: Color(0xff2175D4),
+                    //     shape: RoundedRectangleBorder(
+                    //       borderRadius: BorderRadius.circular(
+                    //           8), // Adjust the radius as needed
+                    //     ),
+                    //   ),
+                    //   child: Text('Click Me'),
+                    // ),
                   ),
                 ),
               ],
